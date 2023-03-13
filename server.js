@@ -1,7 +1,6 @@
 require("dotenv").config();
 const connectionDB = require("./db/connect");
 const itemsRouter = require("./routes/itemsRoutes");
-const TodoItem = require("./models/todoItems");
 const error = require("./middleware/errors");
 const cors = require("cors");
 const express = require("express");
