@@ -13,10 +13,10 @@ app.use(cors());
 
 app.use("/todos", itemsRouter);
 app.use("*", error);
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 7000;
 const start = async () => {
   try {
-    await connectionDB(process.env.DB_CONNECT);
+    await connectionDB(process.env.MONGO_URI);
     app.listen(PORT, () => {
       console.log(`server running on port ${PORT}`);
     });
